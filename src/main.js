@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import './registerServiceWorker'
 
+import 'aframe'
+
 Vue.config.productionTip = false
 
 new Vue({
