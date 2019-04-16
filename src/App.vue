@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="vue" src="./assets/logo.png" alt="Vue.js PWA">
+    <hello-aframe></hello-aframe>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HelloAframe from './components/HelloAframe'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloAframe
   }
 }
 </script>
 
 <style>
+body {
+  margin: 0;
+}
+.a-enter-vr-button {
+  position: fixed;
+  bottom: 20px !important;
+}
 #app {
+  height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.vue {
+  max-height: 50px;
+  width: auto;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1;
 }
 </style>
