@@ -1,6 +1,9 @@
 <template>
 
   <a-scene renderer="colorManagement: true;">
+    <a-assets>
+      <img id="notredam" :src="notredam" alt="Foto 360º da Igreja de Notre Dam">
+    </a-assets>
 
     <!-- Objects -->
     <a-entity position="0 0 -1.5">
@@ -11,7 +14,10 @@
         width="1"
         v-bind:color="buttonColor"
         v-on:mouseenter="reset"
+        shadow
       >
+        <!-- <a-entity text="value: ANIMAR; font: ../assets/Roboto-msdf.json" position="-0.45 0 0.07" color="#000">   
+        </a-entity> -->
         <a-text
         color="#000"
         position="-0.45 0 0.07"
@@ -21,27 +27,27 @@
       
       <a-box
         position="-1 0.5 -3" rotation="0 45 0" shadow
-        v-bind:color="boxColor"
+        :color="boxColor"
       ></a-box>
 
       <a-sphere
         position="0 1.25 -5" color="#ef2d5e" shadow
-        v-bind:radius="sphereRadius"
+        :radius="sphereRadius"
       ></a-sphere>
 
       <a-cylinder
         radius="0.5" height="1.5" color="#ffc65d" shadow
-        v-bind:position="cylinderPosition"
+        :position="cylinderPosition"
       ></a-cylinder>
 
       <a-plane
         position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7bc8a4" shadow="cast: false"
-        v-bind:visible="planeVisibility.toString()"
+        :visible="planeVisibility.toString()"
       ></a-plane>
     </a-entity>
 
     <!-- Sky -->
-    <a-sky :src="notredam"></a-sky>
+    <a-sky src="#notredam"></a-sky>
 
     <!-- Player -->
     <a-camera position="0 1.6 0" rotation="0 -180 0">
@@ -63,26 +69,27 @@ export default {
         sphereRadius: 1.25,
         cylinderPosition: '1 0.75 -3',
         planeVisibility: true,
-        notredam: require('../assets/notredam.jpg')
+        notredam: require('../assets/notredam.jpg'),
+        roboto: require('../assets/Roboto-msdf.json')
     }
   },
   methods: {
     animate() {
       setTimeout(() => {
         this.boxColor = 'dodgerblue';
-      }, 1000);
-
-      setTimeout(() => {
-        this.sphereRadius = 1.75;
       }, 1500);
 
       setTimeout(() => {
-        this.cylinderPosition = '1 2 -3';
+        this.sphereRadius = 1.75;
       }, 2000);
 
       setTimeout(() => {
-        this.planeVisibility = false;
+        this.cylinderPosition = '1 2 -3';
       }, 2500);
+
+      setTimeout(() => {
+        this.planeVisibility = false;
+      }, 3000);
     },
     reset() {
       const { boxColor, buttonColor, sphereRadius, cylinderPosition, planeVisibility } = this.originalData;
