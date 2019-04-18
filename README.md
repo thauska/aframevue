@@ -1,7 +1,9 @@
 # Showcase de integração do Vue.js com A-Frame 
 ## Apresentado no dia 12 de abril de 2019 na 5 Edição do Vue Norte, realizado na Unama em Belém do Pará
 
-### Projeto Vue criado com Vue CLI
+### Acesso ao slide de apresentação, [clique aqui](https://docs.google.com/presentation/d/1S_8Yb58_HIMQw57qiYEu11MaiV94sjJ_4gu49L68Hcg/edit?usp=sharing "Apresentação Google Slide").
+
+## **Projeto Vue criado com Vue CLI**
 
 * Para utilização do Vue CLI, instalar via terminal a nível global:
 ```
@@ -20,9 +22,15 @@ npm install --save aframe
 
 ### Após os passos acima, seguir para o código
 
+* Incluir no arquivo **main.js**:
+```
+import 'aframe'
+```
 
+<br>
 ***
-
+***
+<br>
 
 ## Project setup
 ```

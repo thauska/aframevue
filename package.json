@@ -1,6 +1,7 @@
 {
   "name": "aframevue",
   "version": "0.1.0",
+  "author": "thayanacmamore@gmail.com",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
