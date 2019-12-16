@@ -21,7 +21,6 @@ body {
 }
 .a-enter-vr-button {
   position: fixed;
-  bottom: 20px !important;
 }
 #app {
   height: 100%;
@@ -34,7 +33,7 @@ body {
   max-height: 50px;
   width: auto;
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   left: 20px;
   z-index: 1;
 }
